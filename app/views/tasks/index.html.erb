@@ -1,0 +1,29 @@
+<div class="container col-6 border bg-light mt-5">
+
+
+  <div class="py-3">
+
+    <h1>My Task</h1>
+
+  </div>
+
+  <div>
+    <ul class="list-group p-3">
+      <% @tasks.each do |task| %>
+
+      <label class="container">
+        <input type="checkbox" <%=  'checked' if task.completed %>>
+        <%= link_to task.title, task_path(task.id) %>
+        <span class="checkmark"></span>
+      </label>
+
+      <% end %>
+    </ul>
+
+  </div>
+
+  <div>
+
+  </div>
+
+</div>
